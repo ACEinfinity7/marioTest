@@ -97,10 +97,28 @@ def best_speed(bodies_dict, char_dict):
 
 
 
-def best_acceleration(bodies_file, char_file):
+def best_acceleration(bodies_dict, char_dict):
     """
     """
-    pass
+    acc_n = 0
+    for acc_char in char_dict:
+        for acc_body in bodies_dict:
+            #row = char_dict[x]
+            #speed = row[1]
+            #print(char_dict[speed_char][1],'-----', bodies_dict[speed_body][2])
+            acc_current_char = float(char_dict[acc_char][2])
+            acc_current_body = float(bodies_dict[acc_body][3])
+
+
+            #speed_add = char_dict[speed_char][1] + bodies_dict[speed_body][2]
+            #'character is,', char_dict[speed_char][0], ', and body is,', bodies_dict[speed_body][0], ', their total speed is,', speed_addition
+            acc_add = acc_current_body + acc_current_char
+            #print(speed_add)
+            if acc_add > acc_n:
+                acc_n = acc_add
+            else:
+                pass
+    return acc_n
 
 
 # TODO refactor and consider if there's a better way than passing in the

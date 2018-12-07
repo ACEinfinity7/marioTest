@@ -24,3 +24,9 @@ bodies_dict, char_dict = read_and_combine(bodies_file, char_file)
 output = best_speed(bodies_dict, char_dict)
 
 print(output)
+
+
+
+
+output_acc = best_acceleration(bodies_dict, char_dict)
+print(output_acc)
